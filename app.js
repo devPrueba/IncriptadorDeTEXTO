@@ -12,28 +12,28 @@ const matriz = [
     ["u", "ufat"]
 ];
 
-function botonEncriptar(){
+function botonEncriptar() {
     const texto = encriptar(campoTexto.value);
     campoMensaje.value = texto;
 }
 
-function encriptar(fraseAEncriptar){
-    if(/^[a-z\s]+$/.test(fraseAEncriptar)){
-        for(let i = 0; i < matriz.length; i++){
-            if(fraseAEncriptar.includes(matriz[i][0])){
+function encriptar(fraseAEncriptar) {
+    if (/^[a-z\s]+$/.test(fraseAEncriptar)) {
+        for (let i = 0; i < matriz.length; i++) {
+            if (fraseAEncriptar.includes(matriz[i][0])) {
                 fraseAEncriptar = fraseAEncriptar.replaceAll(
-                    matriz[i][0], 
+                    matriz[i][0],
                     matriz[i][1]
                 );
-            } else{
+            } else {
                 limpiarCampos();
             }
         }
-        campoTexto.value="";
+        campoTexto.value = "";
 
         campoMensaje.style.display = "block";
         imagenSalida.style.display = "none";
-        areaCopia.style.display ="block"
+        areaCopia.style.display = "block"
         mensaje.style.display = "none";
         return fraseAEncriptar;
     } else {
@@ -43,28 +43,28 @@ function encriptar(fraseAEncriptar){
     }
 }
 
-function botonDesencriptar(){
+function botonDesencriptar() {
     const texto = desencriptar(campoTexto.value);
     campoMensaje.value = texto;
 }
 
-function desencriptar(fraseADesencriptar){
-    if(/^[a-z\s]+$/.test(fraseADesencriptar)){
-        for(var i = 0; i < matriz.length; i++){
-            if(fraseADesencriptar.includes(matriz[i][1])){
+function desencriptar(fraseADesencriptar) {
+    if (/^[a-z\s]+$/.test(fraseADesencriptar)) {
+        for (var i = 0; i < matriz.length; i++) {
+            if (fraseADesencriptar.includes(matriz[i][1])) {
                 fraseADesencriptar = fraseADesencriptar.replaceAll(
                     matriz[i][1],
                     matriz[i][0]
                 );
-            } else{
+            } else {
                 limpiarCampos();
             }
         }
-        campoTexto.value="";
+        campoTexto.value = "";
 
         campoMensaje.style.display = "block";
         imagenSalida.style.display = "none";
-        areaCopia.style.display ="block"
+        areaCopia.style.display = "block"
         mensaje.style.display = "none";
         return fraseADesencriptar;
     } else {
@@ -74,12 +74,12 @@ function desencriptar(fraseADesencriptar){
     }
 }
 
-function limpiarCampos(){
+function limpiarCampos() {
     document.getElementById("campoTexto").value = "";
-    document.getElementById("campoMensaje").value = ""; 
+    document.getElementById("campoMensaje").value = "";
 }
 
-function botonCopiar(){
+function botonCopiar() {
     let copiar = navigator.clipboard.writeText(campoMensaje.value);
     return copiar;
 }

@@ -29,7 +29,7 @@ Puede acceder al proyecto en línea a través de GitHub Pages en [Encriptador y 
 
 ## 👨‍💻 Desarrollado por
 
-David Velasco Fierros
+Marie DEV
 
 ## 📸 Capturas de Pantalla
 ¡Aquí tienes algunas vistas previas del proyecto!
@@ -53,7 +53,4 @@ Esta captura muestra la funcionalidad de desencriptación de texto. El texto de 
     <img src="https://github.com/DavidVF7/Encriptador-y-Desencriptador-de-Texto/assets/103916971/0a06a07f-32d7-46ad-bd6c-1f2db72065fb"
 </p>
 
-## ¿Cómo funciona? 🎥
-Aquí puedes ver una demostración visual de cómo funciona el proyecto:
 
-[Demostración del proyecto](https://www.youtube.com/watch?v=xg4_5npavtQ)
